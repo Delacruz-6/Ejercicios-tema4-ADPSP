@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "7fdbeec7-5df0-4a01-9ca1-2c76eac85ea3",
+		"name": "EJ01- T4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/estacion/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacion",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/estacion/189",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacion",
+						"189"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Añadir estacion",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\" :\"Gasolinera cara\",\r\n    \"marca\" :\"Repsol\",\r\n    \"tieneAutoLavado\" : false,\r\n    \"precioGasoilNormal\" : 0.8,\r\n    \"precioGasolina95Octavos\" : -1.898,\r\n    \"precioGasolina98\" : 1,\r\n    \"servicios\" :\"To los que tu quieras y más\",\r\n    \"fechaApertura\" :\"2007-12-03T10:15:30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/estacion/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacion",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
