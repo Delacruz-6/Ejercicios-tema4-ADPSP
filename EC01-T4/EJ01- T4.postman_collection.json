@@ -1,78 +1,251 @@
 {
 	"info": {
-		"_postman_id": "7fdbeec7-5df0-4a01-9ca1-2c76eac85ea3",
+		"_postman_id": "ca6b6301-1f11-472d-ad01-1e3027f7b66a",
 		"name": "EJ01- T4",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "getAll",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/estacion/",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"estacion",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "getOne",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/estacion/189",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"estacion",
-						"189"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Añadir estacion",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"nombre\" :\"Gasolinera cara\",\r\n    \"marca\" :\"Repsol\",\r\n    \"tieneAutoLavado\" : false,\r\n    \"precioGasoilNormal\" : 0.8,\r\n    \"precioGasolina95Octavos\" : -1.898,\r\n    \"precioGasolina98\" : 1,\r\n    \"servicios\" :\"To los que tu quieras y más\",\r\n    \"fechaApertura\" :\"2007-12-03T10:15:30\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Peticiones correctas",
+			"item": [
+				{
+					"name": "Mostrar todas las estaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/estacion/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estacion",
+								""
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:8080/estacion/",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"estacion",
-						""
-					]
+				{
+					"name": "Mostrar una estacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/estacion/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estacion",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Añadir estacion",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" :\"Gasolinera cara\",\r\n    \"marca\" :\"Repsol\",\r\n    \"ubicacion\" : \"-223434, 45657\",\r\n    \"precioGasoilNormal\" : 1.355,\r\n    \"precioGasolina95Octavos\" : 1.442 ,\r\n    \"precioGasolina98\" : 1.619,\r\n    \"precioGasoilEspecial\": 1.545,\r\n    \"servicios\" :\"Suministro de combustible\",\r\n    \"fechaApertura\" :\"2007-12-03T10:15:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/estacion/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estacion",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar estacion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" :\"Gasolinera barata\",\r\n    \"marca\" :\"Repsol\",\r\n    \"tieneAutoLavado\" : true,\r\n    \"ubicacion\": \"20074, -45698\",\r\n    \"precioGasoilNormal\" : 0.5,\r\n    \"precioGasolina95Octavos\" : 0.6,\r\n    \"precioGasolina98\" : 0.7,\r\n    \"precioGasoilEspcial\": 0.8,\r\n    \"servicios\" :\"Suministro combustible, tienda, zona de lavado y parking de mercancias peligrosas\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/estacion/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estacion",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar estacion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/estacion/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estacion",
+								"1"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "Peticiones erroneas",
+			"item": [
+				{
+					"name": "Mostrar todas las estaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/estacion/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estacion",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar una estacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/estacion/189",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estacion",
+								"189"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Añadir estacion",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" :\"\",\r\n    \"marca\" :\"\",\r\n    \"tieneAutoLavado\" : null,\r\n    \"ubicacion\" : \"-223434, 45657\",\r\n    \"precioGasoilNormal\" :  3.35,\r\n    \"precioGasolina95Octavos\" : -0.66,\r\n    \"precioGasolina98\" : 1.788989,\r\n    \"servicios\" :\"To los que tu quieras y más\",\r\n    \"fechaApertura\" :\"2007-12-03T10:15:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/estacion/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estacion",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar estacion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" :\"\",\r\n    \"marca\" :\"\",\r\n    \"precioGasoilNormal\" :  3.35,\r\n    \"precioGasolina95Octavos\" : -0.66,\r\n    \"precioGasolina98\" : -10.788,\r\n    \"precioGasoilEspcial\": -0.88976,\r\n    \"servicios\" :\"Suministro combustible, tienda, zona de lavado y parking de mercancias peligrosas \",\r\n    \"fechaApertura\" :\"2022-12-03T10:15:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/estacion/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estacion",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar estacion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/estacion/145",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estacion",
+								"145"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
