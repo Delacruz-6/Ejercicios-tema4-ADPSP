@@ -44,7 +44,7 @@ public class EstacionController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> delete (@Valid @PathVariable Long id){
+    public ResponseEntity<?> delete (@PathVariable Long id){
         servicio.delete(id);
         return ResponseEntity.noContent().build();
 
