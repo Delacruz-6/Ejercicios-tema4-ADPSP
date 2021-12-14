@@ -22,13 +22,13 @@ import java.util.stream.Collectors;
 public class GlobalRestControllerAdvice extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler({NotFoundException.class})
-    public ResponseEntity<?> handleNotFoundException(HttpStatus status,NotFoundException ex, WebRequest request) {
-        return buildApiError(status,ex, request);
+    public ResponseEntity<?> handleNotFoundException(NotFoundException ex, WebRequest request) {
+        return buildApiError(HttpStatus.NOT_FOUND,ex, request);
     }
 
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid( MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
-        return buildApiError(status,"Errores varios en la validación", request, ex.getFieldErrors()
+        return buildApiError(status,"Varios errores de validación", request, ex.getFieldErrors()
                 .stream().map(error -> ApiValidationSubError.builder()
                         .objeto(error.getObjectName())
                         .campo(error.getField())

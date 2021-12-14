@@ -1,5 +1,7 @@
 package com.salesianos.triana.dam.EC01T4.controllers;
 
+import com.salesianos.triana.dam.EC01T4.dtos.CreatedEstacionDto;
+import com.salesianos.triana.dam.EC01T4.dtos.GetEstacionDto;
 import com.salesianos.triana.dam.EC01T4.models.EstacionDeServicio;
 import com.salesianos.triana.dam.EC01T4.services.EstacionServicio;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +20,7 @@ public class EstacionController {
 
 
     @GetMapping("/")
-    public List<EstacionDeServicio> getAll(){
+    public List<GetEstacionDto> getAll(){
 
         return servicio.findAll();
     }
@@ -30,14 +32,14 @@ public class EstacionController {
     }
 
     @PostMapping("/")
-    public EstacionDeServicio save (@Valid @RequestBody EstacionDeServicio estacion){
+    public EstacionDeServicio save (@Valid @RequestBody CreatedEstacionDto estacion){
 
         return servicio.save(estacion);
     }
 
 
     @PutMapping("/{id}")
-    public EstacionDeServicio editar (@Valid  @RequestBody EstacionDeServicio estacion , @PathVariable Long id){
+    public EstacionDeServicio editar (@Valid  @RequestBody CreatedEstacionDto estacion , @PathVariable Long id){
         return servicio.editar(estacion, id);
     }
 
