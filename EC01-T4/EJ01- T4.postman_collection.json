@@ -56,7 +56,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\" :\"Gasolinera cara\",\r\n    \"marca\" :\"Repsol\",\r\n    \"ubicacion\" : \"-223434, 45657\",\r\n    \"precioGasoilNormal\" : 1.355,\r\n    \"precioGasolina95Octavos\" : 1.442 ,\r\n    \"precioGasolina98\" : 1.619,\r\n    \"precioGasoilEspecial\": 1.545,\r\n    \"servicios\" :\"Suministro de combustible\",\r\n    \"fechaApertura\" :\"2007-12-03T10:15:30\"\r\n}",
+							"raw": "{\r\n    \"nombre\" :\"Gasolinera cara\",\r\n    \"marca\" :\"Repsol\",\r\n    \"ubicacion\" : \"37.3803587,-6.0097771\",\r\n    \"precioGasoilNormal\" : 1.355,\r\n    \"precioGasolina95Octavos\" : 1.442 ,\r\n    \"precioGasolina98\" : 1.619,\r\n    \"precioGasoilEspecial\": 1.545,\r\n    \"servicios\" :\"Suministro de combustible\",\r\n    \"fechaApertura\" :\"2007-12-03T10:15:32\",\r\n    \"fechaRegistro\" :\"2007-12-03T10:15:30\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -177,7 +177,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\" :\"\",\r\n    \"marca\" :\"\",\r\n    \"tieneAutoLavado\" : null,\r\n    \"ubicacion\" : \"-223434, 45657\",\r\n    \"precioGasoilNormal\" :  3.35,\r\n    \"precioGasolina95Octavos\" : -0.66,\r\n    \"precioGasolina98\" : 1.788989,\r\n    \"servicios\" :\"To los que tu quieras y más\",\r\n    \"fechaApertura\" :\"2007-12-03T10:15:30\"\r\n}",
+							"raw": "{\r\n    \"nombre\" :\"\",\r\n    \"marca\" :\"\",\r\n    \"tieneAutoLavado\" : null,\r\n    \"ubicacion\" : \"-223434, 45657\",\r\n    \"precioGasoilNormal\" :  3.35,\r\n    \"precioGasolina95Octavos\" : -0.66,\r\n    \"precioGasolina98\" : 1.788989,\r\n    \"servicios\" :\"To los que tu quieras y más\",\r\n    \"fechaApertura\" :\"2007-12-03T10:15:10\",\r\n    \"fechaRegistro\" :\"2017-12-03T10:15:30\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -205,7 +205,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\" :\"\",\r\n    \"marca\" :\"\",\r\n    \"precioGasoilNormal\" :  3.35,\r\n    \"precioGasolina95Octavos\" : -0.66,\r\n    \"precioGasolina98\" : -10.788,\r\n    \"precioGasoilEspcial\": -0.88976,\r\n    \"servicios\" :\"Suministro combustible, tienda, zona de lavado y parking de mercancias peligrosas \",\r\n    \"fechaApertura\" :\"2022-12-03T10:15:30\"\r\n}",
+							"raw": "{\r\n    \"nombre\" :\"\",\r\n    \"marca\" :\"\",\r\n    \"ubicacion\" : \"37.3803587 -6.0097771\",\r\n    \"precioGasoilNormal\" :  3.35,\r\n    \"precioGasolina95Octavos\" : -0.66,\r\n    \"precioGasolina98\" : -10.788,\r\n    \"precioGasoilEspcial\": -0.88976,\r\n    \"servicios\" :\"Suministro combustible, tienda, zona de lavado y parking de mercancias peligrosas \",\r\n    \"fechaApertura\" :\"2022-12-10T10:15:30\",\r\n    \"fechaRegistro\" :\"2023-12-16T10:15:30\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

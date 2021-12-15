@@ -9,7 +9,7 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 import java.lang.annotation.*;
 
-@Target({ElementType.METHOD, ElementType.FIELD})
+@Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = FechaValValidator.class)
 @Documented
@@ -20,6 +20,9 @@ public @interface FechasVal {
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
+
+    String fechaAperturaField();
+    String fechaRegistroField();
 
 
 }

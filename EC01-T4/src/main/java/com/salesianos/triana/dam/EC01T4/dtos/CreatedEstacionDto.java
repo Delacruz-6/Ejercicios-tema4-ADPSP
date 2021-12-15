@@ -1,5 +1,6 @@
 package com.salesianos.triana.dam.EC01T4.dtos;
 
+import com.salesianos.triana.dam.EC01T4.validacion.anotaciones.FechasVal;
 import com.salesianos.triana.dam.EC01T4.validacion.anotaciones.UbicacionUnica;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 @Builder
 @Data
 @AllArgsConstructor
+@FechasVal (fechaAperturaField = "fechaApertura", fechaRegistroField = "fechaRegistro", message = "{estacion.fechas}")
 public class CreatedEstacionDto {
 
     @NotBlank ( message = "{estacion.nombre.blank}")
@@ -49,9 +51,12 @@ public class CreatedEstacionDto {
     @Lob
     private String servicios;
 
+    @NotNull
+    @Builder.Default
     @Past (message = "{estacion.fechaApertura.past}")
-    private LocalDateTime fechaApertura;
+    private LocalDateTime fechaApertura = LocalDateTime.now().plusMinutes(1);
 
+    @NotNull
     @Builder.Default
     private LocalDateTime fechaRegistro = LocalDateTime.now();
 }

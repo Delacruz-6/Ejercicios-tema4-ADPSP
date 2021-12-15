@@ -8,15 +8,6 @@ public class ConverterEstacion {
 
     public EstacionDeServicio createdEstacionToDto (CreatedEstacionDto c){
 
-        // Cree esta condición porque no conseguí que funcionara la anotación
-        // Builder.default cuando uso este método
-        /*
-        if(c.getTieneAutoLavado() == null){
-            c.setTieneAutoLavado(false);
-        }
-
-         */
-
         return EstacionDeServicio.builder()
                 .nombre(c.getNombre())
                 .ubicacion(c.getUbicacion())
@@ -27,6 +18,7 @@ public class ConverterEstacion {
                 .precioGasoilEspecial(c.getPrecioGasoilEspecial())
                 .precioGasolina95Octavos(c.getPrecioGasolina95Octavos())
                 .fechaApertura(c.getFechaApertura())
+                .fechaRegistro(c.getFechaRegistro())
                 .servicios(c.getServicios())
                 .build();
 
