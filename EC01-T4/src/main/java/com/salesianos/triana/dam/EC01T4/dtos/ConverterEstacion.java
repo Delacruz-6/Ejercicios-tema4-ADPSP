@@ -10,15 +10,18 @@ public class ConverterEstacion {
 
         // Cree esta condición porque no conseguí que funcionara la anotación
         // Builder.default cuando uso este método
+        /*
         if(c.getTieneAutoLavado() == null){
             c.setTieneAutoLavado(false);
         }
+
+         */
 
         return EstacionDeServicio.builder()
                 .nombre(c.getNombre())
                 .ubicacion(c.getUbicacion())
                 .marca(c.getMarca())
-                .tieneAutoLavado(c.getTieneAutoLavado())
+                .tieneAutoLavado(c.isTieneAutoLavado())
                 .precioGasoilNormal(c.getPrecioGasoilNormal())
                 .precioGasolina98(c.getPrecioGasolina98())
                 .precioGasoilEspecial(c.getPrecioGasoilEspecial())

@@ -1,5 +1,6 @@
 package com.salesianos.triana.dam.EC01T4.dtos;
 
+import com.salesianos.triana.dam.EC01T4.validacion.anotaciones.UbicacionUnica;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,11 +20,13 @@ public class CreatedEstacionDto {
     @NotNull ( message =  "{estacion.marca.nNull}")
     private String marca;
 
+    @Pattern(regexp = "^([-+]?\\d{1,2}[.]\\d+),\\s*([-+]?\\d{1,3}[.]\\d+)$", message = "{estacion.ubicacion.exp}")
+    @UbicacionUnica(message = "{estacion.ubicacion.UbicacionUnica}")
     @NotBlank(message = "{estacion.ubicacion.blank}")
     private String ubicacion;
 
-    @Builder.Default //No funciona
-    private Boolean tieneAutoLavado = false;
+    @Builder.Default
+    private boolean tieneAutoLavado = false;
 
     @NotNull( message = "{estacion.precioGasoilNormal.Nnull}" )
     @Digits (integer = 1, fraction = 3, message = "{estacion.precioGasoilNormal.digit}" )
@@ -48,4 +51,7 @@ public class CreatedEstacionDto {
 
     @Past (message = "{estacion.fechaApertura.past}")
     private LocalDateTime fechaApertura;
+
+    @Builder.Default
+    private LocalDateTime fechaRegistro = LocalDateTime.now();
 }

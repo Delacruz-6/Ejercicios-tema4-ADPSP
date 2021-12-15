@@ -7,4 +7,5 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public interface EstacionRepository extends JpaRepository<EstacionDeServicio, Long> {
 
 
+    boolean existsByUbicacion(String ubicacion);
 }

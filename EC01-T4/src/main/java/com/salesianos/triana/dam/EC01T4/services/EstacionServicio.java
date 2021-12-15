@@ -56,7 +56,7 @@ public class EstacionServicio {
             e.setPrecioGasoilNormal(editado.getPrecioGasoilNormal());
             e.setPrecioGasolina98(editado.getPrecioGasolina98());
             e.setPrecioGasolina95Octavos(editado.getPrecioGasolina95Octavos());
-            e.setTieneAutoLavado(editado.getTieneAutoLavado());
+            e.setTieneAutoLavado(editado.isTieneAutoLavado());
             e.setServicios(editado.getServicios());
             return  repositorio.save(e);
         }).orElseThrow(() -> new SingleNotFoundException(id.toString(), EstacionDeServicio.class)
@@ -69,6 +69,9 @@ public class EstacionServicio {
         repositorio.delete(estacion);
     }
 
+    public boolean comprobarUbicacion(String ubicacion){
+        return repositorio.existsByUbicacion(ubicacion);
+    }
 
 
 }

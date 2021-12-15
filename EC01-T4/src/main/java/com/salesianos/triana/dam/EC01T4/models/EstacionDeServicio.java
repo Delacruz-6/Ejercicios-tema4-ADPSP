@@ -28,8 +28,7 @@ public class EstacionDeServicio {
 
     private String ubicacion;
 
-    @Builder.Default  //No funciona
-    private Boolean tieneAutoLavado = false;
+    private boolean tieneAutoLavado;
 
     private Float precioGasoilNormal;
 
@@ -43,6 +42,8 @@ public class EstacionDeServicio {
     private String servicios;
 
     private LocalDateTime fechaApertura;
+
+    private LocalDateTime fechaRegistro;
 
 
 
