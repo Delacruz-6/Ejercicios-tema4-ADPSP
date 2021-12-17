@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "178e92b7-3d2f-448f-ae28-6f6dfe8b6263",
+		"name": "EJ03-T4-AD/PSP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Peticion erronea",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"lmlopez\",\r\n    \"email\": \"lmlopez-salesianos\",\r\n    \"password\": \"\",\r\n    \"verifyPassword\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuario/v1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Peticion correcta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"delacruz\",\r\n    \"email\": \"delacruz.gugui20@triana.salesianos.edu\",\r\n    \"password\": \"Contraseña.Segura21\",\r\n    \"verifyPassword\": \"Contraseña.Segura21\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuario/v1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
